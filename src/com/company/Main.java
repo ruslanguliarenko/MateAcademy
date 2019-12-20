@@ -10,16 +10,13 @@ import java.util.TreeSet;
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         String expr = "";
         BufferedReader reader =
                 new BufferedReader(new InputStreamReader(System.in));
-        try {
-            expr = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        expr = reader.readLine();
+
         Calculator calculator = new Calculator(expr);
         System.out.println(calculator.getResult());
 
